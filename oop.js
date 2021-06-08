@@ -19,3 +19,13 @@ class Car extends Vehicle {
         return 4
     }
 }
+
+class Motorcycle extends Vehicle {
+    numwheels() {
+        return 2
+    }
+
+    revEngine() {
+        return 'VROOM!!!';
+    }
+}

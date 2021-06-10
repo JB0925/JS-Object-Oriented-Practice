@@ -1,0 +1,268 @@
+/* game board table */
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  background-color: black;
+}
+
+nav h1, nav p {
+  color: white;
+}
+
+nav p {
+  align-self: center;
+}
+
+.message {
+  position: absolute;
+  display: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 4rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  top: 70px;
+  left: 0;
+  height: 10%;
+  width: 100vw;
+}
+
+#board {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#board td {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+  margin-bottom: 10px;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  position: absolute;
+  margin-right: -3px;
+  margin-left: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+}
+
+.five {
+  top: -300px;
+}
+
+.four {
+  top: -280px;
+}
+
+.three {
+  top: -230px;
+}
+
+.two {
+  top: -180px;
+}
+
+.one {
+  top: -130px;
+}
+
+.zero {
+  top: 0px;
+}
+
+.lower {
+  top: 5px;
+  transition: top 1.5s;
+};
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray !important;
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
+
+button {
+  position: absolute;
+  background-color: dodgerblue;
+  color: white;
+  top: 85.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+}
+
+input {
+  display: block;
+  font-size: 15px;
+}
+
+#p1label {
+  position: absolute;
+  top: 81.5%;
+  left: 10%;
+}
+
+#p1color {
+  position: absolute;
+  top: 85.5%;
+  left: 10%;
+  height: 35px;
+  width: 200px;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+#p2label {
+  position: absolute;
+  top: 81.5%;
+  left: 75%;
+}
+
+#p2color {
+  position: absolute;
+  top: 85.5%;
+  left: 75%;
+  height: 35px;
+  width: 200px;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+#burger {
+  display: none;
+  position: absolute;
+  color: white;
+  font-size: 28px;
+  top: 5%;
+  left: 97%;
+  transform: translateY(-50%);
+}
+
+.directions {
+  line-height: 1.8rem;
+  padding-top: 15px;
+  line-break: auto;
+  margin-top: 0%;
+  height: 100vh;
+  width: 0px;
+  background-color: black;
+  color: white;
+  transition: width 1s ease-in-out;
+  z-index: 5;
+}
+
+.directions p {
+  width: 45%;
+}
+
+.directions p, .directions h2 {
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 870px) {
+  #p1color, #p2color {
+    width: 150px;
+  }
+
+  nav p {
+    visibility: hidden;
+  }
+
+  #burger {
+    /* top: 7.5%; */
+    display: inline-block;
+    left: 93%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  nav h1, nav p {
+    font-size: 16px;
+  }
+
+  nav h1 {
+    align-self: center;
+    margin-left: 30px;
+  }
+
+  #p1color, #p2color {
+    width: 100px;
+  }
+
+  #p1label, #p2label {
+    font-size: 12px;
+  }
+
+  #burger {
+    left: 91%;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .piece {
+    margin-left: 2px;
+  }
+
+  nav h1, nav p {
+    font-size: 12px;
+  }
+
+  nav h1 {
+    align-self: center;
+  }
+
+  #p1color, #p2color {
+    width: 100px;
+  }
+
+  #p1color {
+    left: 5%;
+  }
+
+  #p2color {
+    left: 70%;
+  }
+
+  button {
+    width: 100px;
+  }
+
+  #p1label, #p2label {
+    font-size: 12px;
+  }
+
+  #p1label {
+    left: 5%;
+  }
+
+  #p2label {
+    left: 70%;
+  }
+}

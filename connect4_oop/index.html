@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+  <title>Connect 4</title>
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" 
+        rel="stylesheet">
+  <link href="connect4.css" rel="stylesheet">
+</head>
+<body>
+<nav>
+  <h1>Connect Four!</h1>
+  <p>Press "start" to start a game, and press it again to reset.</p>
+  <i class="fas fa-bars" id="burger"></i>
+</nav>
+<div class="directions">
+  <h2>How to Play</h2>
+  <p>Players take turns. The first player to get four in a row, either vertically,
+    horizontally, or diagonally, wins. To start or restart a game, press the "start" button,
+    but make sure that you choose your colors first!
+  </p>
+</div>
+<div class="message"></div>
+<div id="game">
+  <table id="board"></table>
+  <label for="p1color" id="p1label">Enter Player One Color</label>
+  <input type="text" id="p1color">
+  <button>Start</button>
+  <label for="p2color" id="p2label">Enter Player Two Color</label>
+  <input type="text" id="p2color">
+</div>
+
+<script src="new_connect4.js"></script>
+
+</body>
+</html>
